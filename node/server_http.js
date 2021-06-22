@@ -32,6 +32,10 @@ io.on('connection', function (socket){
     });
     socket.on('reqMsg', function (data){
         console.log(data);
+<<<<<<< HEAD
         io.sockets.in(roomName).emit('recMsg',{comment:instanceId+":"+data.comment+'\n'});
+=======
+        io.socket.in(roomName).emit('recMsg',{comment:instanceId+":"+data.comment+'\n'});
+>>>>>>> 67255bb671120bf451e914e2e35ccef832b24034
     })
 })
