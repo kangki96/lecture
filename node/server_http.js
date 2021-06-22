@@ -32,6 +32,6 @@ io.on('connection', function (socket){
     });
     socket.on('reqMsg', function (data){
         console.log(data);
-        io.socket.in(roomName).emit('recMsg',{comment:Id+":"+data.comment+'\n'});
+        io.socket.in(roomName).emit('recMsg',{comment:instanceId+":"+data.comment+'\n'});
     })
 })
