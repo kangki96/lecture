@@ -1,5 +1,6 @@
 var express = require('express'),
     http = require('http');
+const { isObject } = require('util');
     app = express();
     bodyParser = require("body-parser")
 var server = http.createServer(app);
@@ -15,4 +16,22 @@ app.get('/', function(req,res){
 app.post('/',(req,res)=>{
     console.log("[Server] POST : "+JSON.stringify(req.body))
     res.send('post value is : '+req.body.Client+'')
+})
+
+var io = require('socket.io')(server);
+
+var roomName;
+io.on('connection', function (socket){
+    console.log('connect');
+
+    var instanceId = socket.id;
+    socket.on('joinRoom',function(data){
+        console.log(data);
+        socket.join(data.roomName);
+        roomName = data.roomName;
+    });
+    socket.on('reqMsg', function (data){
+        console.log(data);
+        io.socket.in(roomName).emit('recMsg',{comment:Id+":"+data.comment+'\n'});
+    })
 })
