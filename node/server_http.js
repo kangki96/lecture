@@ -14,6 +14,6 @@ app.get('/', function(req,res){
     res.send('Hi, Client, I am a server');
 });
 app.post('/',(req,res)=>{
-    console.log("[Server] POST : "+JSON.stringify(req,body))
+    console.log("[Server] POST : "+JSON.stringify(req.body))
     res.send('post value is : '+req.body.Client+'')
 })
