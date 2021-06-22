@@ -14,7 +14,7 @@
 <input type="text" name="" id="user"><input type="button" value="msg submit" onclick="myOnClick()">
 </body>
 <script>
-    var socket = io.connect('kangki96.securekim.com/chat.html');
+    var socket = io.connect('http://kangki96.securekim.com/chat.html');
     socket.emit('joinRoom', {roomName: 'myroom'});
     socket.on('recMsg', function (data) {
         console.log(data.comment)
