@@ -38,7 +38,7 @@ var PUBKEY = '-----BEGIN RSA PUBLIC KEY-----\n'+
 '-----END RSA PUBLIC KEY-----\n';
  
 // RSA PRIVATE ENCRYPT -> PUBLIC DECRYPT //
- myMSG = "[ORIGINAL] I'm securekim !!!";
+ myMSG = "[ORIGINAL] I'm kingmo !!!";
   
 function privENC_pubDEC(originMSG){
  encmsg = crypto.privateEncrypt(PRIVKEY, Buffer.from(originMSG, 'utf8') ).toString('base64');
