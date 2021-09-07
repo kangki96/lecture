@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="loginstyle.css" />
+  </head>
+  <body>
+    <div class="login">
+      <form method="POST" class="loginBox">
+        Portfolio Page
+        <input type="text" placeholder="ID" name="id" />
+        <input type="password" placeholder="Password" name="password" />
+        <span style="color: red; font-size: 10px"><%= text %></span>
+        <input type="submit" class="sub" value="Login" />
+      </form>
+      <div>
+        <ol>
+          <li><a href="/signup">회원가입</a></li>
+          <li><a href="/find">ID/Password 찾기</a></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+
+body{
+    background-color: #353b48;
+}
+
+.sign{
+    background-color: white;
+    width: 70vh;
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -35vh;  
+    margin-top: -35vh; 
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 3, 0.1), 0 1px 3px rgba(0, 0, 0, 0.8);;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    position:absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 20px;
+}
+
+.back:focus{
+    color: rgb(82, 76, 76);
+}
+
+input{
+    width: 300px;
+    height: 24px;
+    border : 1px solid #353b48;
+    border-radius: 5px;
+}
+
+.name{
+    width: 142px;
+}
+
+span{
+    display: block;
+    font-size: 10px;
+}
+
+.seesion{
+    height: 35px;
+    border:none;
+    color: white;
+    background-color: #52565f;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 3, 0.1), 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+input:focus{
+    outline-color: #7d8491;
+    outline-style: none;
+}

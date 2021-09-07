@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sign">
+        <h3>회원 가입</h3>
+        <a class="back" href="/login"><i class="fas fa-arrow-left"></i></a>
+        <form action="" autocomplete="on" method="POST">
+            <div>
+                <input class="name" type="text" placeholder="성" name="firstname" maxlength="4">
+                <input class="name" type="text" placeholder="이름" name="lastname" maxlength="6">
+            </div>
+            <br>
+            <input type="text" placeholder="아이디" maxlength="10" name="id">
+            <span id="idtext"><%= id_text %></span>
+            <br>
+            <input type="password" placeholder="비밀번호" maxlength="10" name="password">
+            <span id="pass"><%= pass_text %></span>
+            <br>
+            <input type="password" placeholder="비밀번호 확인" maxlength="10" name="password_confirm"> 
+            <span id="password"><%= password_text %></span>
+            <br>
+            <input type="email" autocomplete="off" placeholder="이메일" name="emali">
+            <br>
+            <br>
+            <br>
+            <input class="seesion" type="submit" value="가입">
+        </form>
+    </div>
+
+    <script>
+        var pass = document.getElementById("pass");
+        var password = document.getElementById("password");
+        var idtext = document.getElementById("idtext");
+        if(pass.innerHTML == "비밀번호를 입력 해주세요!!!"){
+            pass.style.color = "red"
+        }
+        else if(pass.innerHTML == "비밀번호가 일치하지 않습니다!!!" ){
+            pass.style.color = "red"
+        }
+        else if(pass.innerHTML == "이름을 입력하세요!!!" ){
+            pass.style.color = "red"
+        }
+        if(password.innerHTML == "비밀번호가 일치하지 않습니다!!!" ){
+            password.style.color = "red"
+        }
+        if(idtext.innerHTML == "아이디를 입력 해주세요!!!"){
+            idtext.style.color = "red"
+        } 
+        else if(idtext.innerHTML == "이미 존재하는 아이디 입니다."){
+            idtext.style.color = "red"
+        }
+    </script>
+
+</body>
+</html>
