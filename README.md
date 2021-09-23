@@ -1,4 +1,1 @@
 # lecture
-# lecture
-# lecture
-# lecture
